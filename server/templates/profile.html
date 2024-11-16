@@ -6,8 +6,10 @@
   <title>Profile</title>
 </head>
 <body>
-  {% if pname %}
-    <p>Hello {{ pname }}</p>
+  {% if fname %}
+    <p>Hello, {{ fname }} {{ lname }}</p>
+    <p>Username: {{ username }}</p>
+    <p>Secret Message: {{ secret_message }}</p>
   {% else %}
     <p>I don't know who you are</p>
   {% endif %}
