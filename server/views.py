@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, make_response
-from login import is_valid_login
+from users import is_valid_login
 
 views = Blueprint(__name__, "views")
 
