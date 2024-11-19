@@ -32,7 +32,7 @@ def login():
     if is_valid_login(
       request.form['username'],
       request.form['password']):
-      """True Codeblock"""
+      """True Codeblocks"""
       resp = make_response(redirect("/profile"))
       resp.set_cookie(
            'session_id',
