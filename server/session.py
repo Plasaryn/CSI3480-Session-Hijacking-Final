@@ -1,10 +1,15 @@
 import jwt
 from users import get_user_info_by_username
 import datetime
+from random import choices
+import string
 
 # Module Constants
-SERVER_SECRET = "G5KG6mPJbnplhdGDvg0xsp83WKa17t9zhlkUMhqsXoWbz3AibS"
+STATIC_SECRET = "G5KG6mPJbnplhdGDvg0xsp83WKa17t9zhlkUMhqsXoWbz3AibS"
 SESSION_TIMEOUT = datetime.timedelta(minutes=30)
+
+RUNTIME_SECRET = "".join(choices(string.ascii_uppercase + string.digits, k=6))
+SERVER_SECRET = RUNTIME_SECRET + STATIC_SECRET
 
 class SessionExpired(KeyError):
   def __init__(self, message:str):
