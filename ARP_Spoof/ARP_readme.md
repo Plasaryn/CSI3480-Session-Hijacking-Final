@@ -4,7 +4,7 @@
 ```bash
 sudo arpspoof -i ens33 -t 10.0.0.45 -r 10.0.0.133
 ```
-## CCommands to Filter Out Packets
+## Commands to Filter Out Packets
 
 These commands drop packets for and from the victim, specifically targeting the Flask application:
 ```bash
